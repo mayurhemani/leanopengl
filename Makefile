@@ -4,7 +4,7 @@ CC=g++
 LD=g++
 CC_FLAGS=-std=c++11
 
-all: bin/hellorhombus bin/hellogl3
+all: bin/hellorhombus bin/hellogl3 bin/firstcamera
 
 
 bin/%: obj/%.o
