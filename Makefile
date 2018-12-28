@@ -1,10 +1,10 @@
-GRAPHICSLIBS=  -lGLEW -lglut -lGLU -lGL
+GRAPHICSLIBS= -lassimp -lGLEW -lglut -lGLU -lGL 
 INCUDES=
 CC=g++
 LD=g++
-CC_FLAGS=-std=c++11
+CC_FLAGS=-std=c++11 
 
-all: bin/hellorhombus bin/hellogl3 bin/firstcamera
+all: bin/hellorhombus bin/hellogl3 bin/firstcamera bin/firstmesh
 
 
 bin/%: obj/%.o
@@ -13,3 +13,8 @@ bin/%: obj/%.o
 
 obj/%.o: %.cpp
 	$(CC) -c $(CC_FLAGS) $(INCLUDES) $< -o $@
+
+
+clean:
+	rm -f bin/*
+	rm -f obj/*
